@@ -62,7 +62,7 @@ gulp.task('sass', function() {
 })
 
 // build 构建生产环境的代码
-gulp.task("build", ['html', 'css', 'js', 'img', 'less', 'sass']);
+gulp.task("build", ['html', 'css', 'js', 'img']);
 
 // watch  监控文件
 
@@ -81,9 +81,9 @@ gulp.task("server", function() {
         livereload: true
     });
     // 监听
-    gulp.watch("src/*.html", ['html']);
-    gulp.watch("src/css/*.css", ['css']);
-    gulp.watch("src/js/*.js", ['js']);
-    gulp.watch("src/images/*.*", ["img"]);
-    gulp.watch("src/less/*.less", ["less"]);
+    gulp.watch(app.src + "*.html", ['html']);
+    gulp.watch(app.src + "css/*.css", ['css']);
+    gulp.watch(app.src + "js/*.js", ['js']);
+    gulp.watch(app.src + "images/*.*", ["img"]);
+
 })
