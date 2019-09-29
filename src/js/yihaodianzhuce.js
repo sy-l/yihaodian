@@ -81,19 +81,20 @@ input 获取焦点时里面的文字left值改动
 /* 表单验证 */
 ;
 (function () {
+    $(function(){
     /*
 				 声明两个正则
 				 * */
-
+    var regUser = /^[a-z_]\w{4,8}$/i;
+    var regPwd = /^[a-z0-9]{6,9}$/i;
+    var rules = {
+        user: false,
+        pwd: false
+    };
     //用户名验证
     $("#userName").blur(function () {
-        var regUser = /^[a-z_]\w{4,8}$/i;
-        var regPwd = /^[a-z0-9]{6,9}$/i;
-        var rules = {
-            user: false,
-            pwd: false
-        };
-        alert(11)
+
+        console.log(111)
         var res = regUser.test(trimer($("#userName").val()));
         if (!res) {
             //验证不通过
@@ -110,42 +111,8 @@ input 获取焦点时里面的文字left值改动
             rules.user = true;
         }
     })
-    /* userName.onblur = function () {
-        //					if(trimer(this.value) == ""){
-        //						alert("不能为空");
-        //					}
-        // console.log(trimer(this.value).match(regUser));
-        //					var res = trimer(this.value).match(regUser);
-        
-    } */
-
-    pwd.onblur = function () {
-        //					var res = trimer(this.value).match(regPwd);
-        var res = regPwd.test(trimer(this.value));
-        if (!res) {
-            //验证不通过
-            pwdReg.innerHTML = '密码验证不通过';
-            pwdReg.style.color = "red";
-            rules.pwd = false;
-        } else {
-            pwdReg.innerHTML = '验证通过';
-            pwdReg.style.color = "gray";
-            rules.pwd = true;
-        }
-    }
-    //如果两个用户名和密码验证都通过才可以提交，否则不能提交
-
-    form.onsubmit = function () {
-        if (rules.user && rules.pwd) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
     function trimer(str) {
         return str.replace(/^\s*|\s*$/g, "");
     }
-
+})
 }())
