@@ -11,8 +11,8 @@ const sass = require('gulp-sass');
 
 
 const app = {
-    src: "lwb/src/",
-    dist: "lwb/dist/"
+    src: "src/",
+    dist: "dist/"
 }
 
 // 处理html
