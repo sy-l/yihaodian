@@ -1,47 +1,51 @@
 /* 帮助中心效果 */ ;
 (function () {
-    $(".drop-li,.drop-li ul").hover(function () {
-        $(this).find("ul").stop().show();
-        $(this).find("ul>li").css({
-            borderBottom: "1px solid #ddd"
+    $(function () {
+        $(".drop-li,.drop-li ul").hover(function () {
+            $(this).find("ul").stop().show();
+            $(this).find("ul>li").css({
+                borderBottom: "1px solid #ddd"
+            })
+        }, function () {
+            $(this).find("ul").stop().hide();
         })
-    }, function () {
-        $(this).find("ul").stop().hide();
     })
 }())
 /* 切换背景图 */
 ;
 (function () {
-    var timer1 = null;
-    var timer2 = null;
-    var timer3 = null;
-    var timer4 = null;
-    var timer5 = null;
-    timer1 = setInterval(function () {
-        $(".m-huantu").css({
-            background: "url(./images/r_icon2.png) no-repeat"
-        }).stop().fadeIn();
-    }, 2000);
-    timer2 = setInterval(function () {
-        $(".m-huantu").css({
-            background: "url('./images/r_icon1.png') no-repeat"
-        }).stop().fadeIn();
-    }, 4000);
-    timer3 = setInterval(function () {
-        $(".m-huantu").css({
-            background: "url('./images/r_icon3.png') no-repeat"
-        }).stop().fadeIn();
-    }, 6000);
-    timer4 = setInterval(function () {
-        $(".m-huantu").css({
-            background: "url('./images/r_icon4.png') no-repeat"
-        }).stop().fadeIn();
-    }, 8000);
-    timer5 = setInterval(function () {
-        $(".m-huantu").css({
-            background: "url('./images/r_icon5.png') no-repeat"
-        }).stop().fadeIn();
-    }, 10000);
+    $(function () {
+        var timer1 = null;
+        var timer2 = null;
+        var timer3 = null;
+        var timer4 = null;
+        var timer5 = null;
+        timer1 = setInterval(function () {
+            $(".m-huantu").css({
+                background: "url(./images/r_icon2.png) no-repeat"
+            }).stop().fadeIn();
+        }, 2000);
+        timer2 = setInterval(function () {
+            $(".m-huantu").css({
+                background: "url('./images/r_icon1.png') no-repeat"
+            }).stop().fadeIn();
+        }, 4000);
+        timer3 = setInterval(function () {
+            $(".m-huantu").css({
+                background: "url('./images/r_icon3.png') no-repeat"
+            }).stop().fadeIn();
+        }, 6000);
+        timer4 = setInterval(function () {
+            $(".m-huantu").css({
+                background: "url('./images/r_icon4.png') no-repeat"
+            }).stop().fadeIn();
+        }, 8000);
+        timer5 = setInterval(function () {
+            $(".m-huantu").css({
+                background: "url('./images/r_icon5.png') no-repeat"
+            }).stop().fadeIn();
+        }, 10000);
+    })
 }())
 
 /* 
@@ -79,40 +83,86 @@ input 获取焦点时里面的文字left值改动
 }())
 
 /* 表单验证 */
+
+
+
+
 ;
 (function () {
-    $(function(){
-    /*
-				 声明两个正则
-				 * */
     var regUser = /^[a-z_]\w{4,8}$/i;
     var regPwd = /^[a-z0-9]{6,9}$/i;
+    var regphone = /^[0-9]{11}$/i;
+    var pwd = /^[a-zA-Z]\w{5,19}$/;
+    var pwd2 = /^[a-zA-Z]\w{5,19}$/;
     var rules = {
         user: false,
-        pwd: false
+        phone: false,
+        pwd: false,
+        pwd2: false
     };
-    //用户名验证
-    $("#userName").blur(function () {
 
-        console.log(111)
-        var res = regUser.test(trimer($("#userName").val()));
-        if (!res) {
-            //验证不通过
-            $(".verify1").html('验证不通过');
-            $(".verify1").css({
-                color = "red"
-            })
-            rules.user = false;
-        } else {
-            $(".verify1").html('验证通过');
-            $(".verify1").css({
-                color = "green"
-            })
-            rules.user = true;
-        }
-    })
     function trimer(str) {
         return str.replace(/^\s*|\s*$/g, "");
     }
-})
+    // 验证用户名
+    $("#userName").focus(function () {
+        $(".verify1").html("包含字母数字下划线,数字不能开头,长度5-9")
+    })
+    $("#userName").blur(function () {
+        var res = regUser.test(trimer($("#userName").val()));
+        if (!res) {
+            //验证不通过
+            $(".verify1").html("不通过");
+            rules.user = false;
+        } else {
+            $(".verify1").html("通过");
+            rules.user = true;
+        }
+    })
+    // 验证手机号
+    $("#phone").focus(function () {
+        $(".verify2").html("请填写正确的手机号,以便接收订单通知,找回密码等")
+    })
+    $("#phone").blur(function () {
+        var res2 = regphone.test(trimer($("#phone").val()));
+        if (!res2) {
+            $(".verify2").html("格式错误，请输入正确的手机号码");
+            rules.phone = false;
+        } else {
+            $(".verify2").html("通过");
+            rules.phone = true;
+        }
+    })
+    // 验证码
+    $("#validCode").focus(function () {
+        $(".verify3").html("如无法接受验证码，请重启手机并确认短信未被拦截！4G用户请关闭4G网络进行接收")
+    })
+    $("#validCode").blur(function () {
+        $(".verify3").html("");
+    })
+    // 验证密码
+    $("#password").focus(function () {
+        $(".verify4").html("密码至少包含 数字和英文,数字不能开头,长度6-20")
+    })
+    $("#password").blur(function () {
+        var res3 = pwd.test(trimer($("#password").val()));
+        if (!res3) {
+            $(".verify4").html("不通过");
+            rules.pwd = false;
+        } else {
+            $(".verify4").html("通过");
+            rules.pwd = true;
+        }
+    })
+    // 确认密码
+    $("#password2").focus(function () {
+        $(".verify5").html("请再次输入密码")
+    })
+    $("#password2").blur(function () {
+        if ($("#password2").val()==$("#password").val()) {
+            $(".verify5").html("通过");
+        } else {
+            $(".verify5").html("两次密码输入不一致");
+        }
+    })
 }())
