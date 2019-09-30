@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(e){$(".move1").click(function(e){$(".head_nav_resou").toggle()})});
+"use strict";$(document).ready(function(S){$(".move1").click(function(S){$(".head_nav_resou").toggle()})});var imgSrcArr=["S1","S2","S3","S4","S5","S6","S7","S8","S9","S10","S11","S12","S13","S14","S15","S16","S17","S18","S19","S20"],imgWrap=[];function preloadImg(S){for(var r=0;r<S.length;r++)imgWrap[r]=new Image,imgWrap[r].src=S[r]}preloadImg(imgSrcArr),$(function(){preloadImg(imgSrcArr)});
