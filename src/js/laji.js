@@ -15,3 +15,8 @@ $(function () {
     });
     
 })
+
+
+$(function() {
+    $("img").lazyload();
+});
