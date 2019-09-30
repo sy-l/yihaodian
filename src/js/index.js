@@ -111,14 +111,14 @@ $(function() {
 //商品鼠标移入效果
 $(function() {
     $('.bag').mouseenter(function() {
-        $('.car3,.find').stop().fadeIn();
-        $('.bag').css({
+        $(this).find(".find,.car3").stop().fadeIn();
+        $(this).css({
             border: '1px solid red'
         })
     })
     $('.bag').mouseleave(function(event) {
-        $('.car3,.find').stop().fadeOut();
-        $('.bag').css({
+        $(this).find(".find,.car3").stop().fadeOut();
+        $(this).css({
             border: ' 1px solid transparent'
         })
     });
