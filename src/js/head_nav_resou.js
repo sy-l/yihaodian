@@ -3,6 +3,7 @@ $(document).ready(function (e) {
         $(".head_nav_resou").toggle();
     });
 });
+//预加载
 //存放图片路径的数组
 var imgSrcArr = [
     'S1',
