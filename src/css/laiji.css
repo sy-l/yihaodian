@@ -37,6 +37,13 @@ u {
 .fr{
     float: right;
 }
+.cl:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
 
 /* 头部 */
 .header {
@@ -246,4 +253,37 @@ u {
     height: 50px;
     line-height: 50px;
     cursor: pointer;
+}
+.box{
+    width: 990px;
+    margin: 0 auto;
+    background: #F9F9F9;
+}
+.box_sp{
+    width: 240px;
+    height: 343px;
+    margin-left: 6px;
+}
+.sp_tu img{
+    width: 220px;
+    height: 220px;
+    margin: 20px 0 0 10px;
+}
+.sp_title{
+    width: 204px;
+    height: 34px;
+    font-size: 12px;
+    margin-left: 18px;
+}
+.sp_price>a{
+    color: #FF4040;
+}
+.sp_price{
+    width: 204px;
+    height: 34px;
+    font-size: 20px;
+    margin: 30px 0 0 18px;
+}
+.box_right{
+    display: none;
 }
