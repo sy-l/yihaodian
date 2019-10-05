@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 body,
 p,
 ul,
@@ -31,6 +32,32 @@ a,
 u {
     text-decoration: none;
 }
+
+.cf:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px "Microsoft YaHei", Helvetica Neue, tahoma, Arial, Verdana, "Hiragino Sans GB", "\5b8b\4f53";
+    color: #333;
+}
+
 /* 头部开始 */
 
 .header {
@@ -131,6 +158,7 @@ u {
     padding-left: 18px;
     background: url(../images/p3.png) no-repeat -4px -5px;
 }
+
 /* 头部结束 */
 /* 滚动搜索开始 */
 
@@ -193,6 +221,7 @@ u {
     padding-left: 50px;
     background: url(../images/car.png) no-repeat 12px -3px;
 }
+
 /* 滚动搜索结束 */
 /* 搜索框开始 */
 
@@ -306,6 +335,7 @@ u {
     border: 1px solid #FF4040;
     color: #FF4040
 }
+
 /* 搜索框结束 */
 /* 导航开始 */
 
@@ -393,6 +423,7 @@ u {
     color: #333333;
     font-weight: bold
 }
+
 .list li a {
     font-size: 12px;
     color: #333333;
@@ -407,6 +438,168 @@ u {
     margin-top: 3px;
 }
 
-#wrap{
+/* 分类 */
+#wrap {
     width: 1440px;
+    margin: 0 auto;
+}
+
+.crumbTop {
+    position: relative;
+    z-index: 41;
+    height: 37px;
+    border-top: 1px solid #fff;
+    background: #fff;
+    font-family: "Microsoft Yahei";
+    zoom: 1;
+}
+
+.crumbTop-left {
+    margin: 10px 0 0 10px;
+}
+
+.crumbTop-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 31;
+    padding: 0 5px;
+    color: #999;
+    font-size: 12px;
+}
+
+.crumbMiddle {
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 10px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.cm-top {
+    border: 2px solid #e5e5e5;
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 2;
+}
+
+.cmT-left {
+    width: 129px;
+    overflow: hidden;
+}
+
+@media (min-width: 1441px) {
+    .cmT-right {
+        width: 1305px;
+    }
+}
+
+.cmT-right {
+    padding: 5px 0;
+    border-left: 1px solid #f2f2f2;
+}
+
+.cmtR-brand {
+    overflow: hidden;
+    margin: 6px 0 6px 13px;
+    max-height: 107px;
+    height: 108px;
+}
+
+.cmtR-brand2 {
+    width: 736px;
+}
+
+@media screen and (min-width:1441px) {
+    .cmtR-brand2 {
+        width: 1156px;
+    }
+}
+.cmtR-brand2 ul{
+    border-left: 1px solid #e5e5e5;
+    padding-top: 1px;
+}
+.cmtR-brand2 ul li{
+    height: auto;
+    margin: 0;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    margin-top: -1px;
+    position: relative;
+}
+.cmtR-brand2 ul li div{
+    position: absolute;
+    top:-1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid red;
+    display: none;
+    z-index: 2;
+}
+.cmtR-brand2 ul li a{
+    display: block;
+    position: relative;
+    width: 88px;
+    height: 35px;
+    line-height: 35px;
+    padding: 8px 8px 9px;
+    text-align: center;
+    margin: 0;
+    border: 0 none;
+    overflow: visible;
+    width: 90px;
+    height: 30px;
+    padding: 11px 7px;
+    color: #ff4040;
+}
+.cmtR-brand2 ul li p{
+    display: block;
+    float: none;
+    margin: 0 auto;
+    line-height: 32px;
+    cursor: pointer;
+    display: none;
+}
+.cmtR-brand2 ul li img {
+    border: 0 none;
+    vertical-align: top;
+    width: 88px;
+    height: 35px;
+}
+.cmtR-more{
+    display: block;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    z-index: 9;
+    clear: both;
+    width: 88px;
+    padding-left: 10px;
+    width: 94px;
+    padding: 5px 0;
+}
+.cmtR-more a{
+    width: 40px;
+    height: 18px;
+    line-height: 18px;
+    color: #999;
+    border-radius: 3px;
+}
+.cmtR-more-one{
+    display: inline;
+    background-color: #fbfbfb;
+    border: 1px solid #dcdcdc;
+    text-align: center;
+}
+.cmtR-more-one:hover{
+    color: red;
+}
+.cmtR-more-tow{
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    border-radius: 3px;
+}
+.cmtR-more-tow:hover{
+    color: red;
 }
