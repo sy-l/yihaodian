@@ -406,3 +406,7 @@ u {
 .list li {
     margin-top: 3px;
 }
+
+#wrap{
+    width: 1440px;
+}
