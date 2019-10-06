@@ -72,3 +72,7 @@ $(function () {
         })
     })
 }())
+/* 懒加载 */
+$(function() {
+    $("img").lazyload();
+});
