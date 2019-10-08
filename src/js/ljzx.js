@@ -1,10 +1,3 @@
-$(function() {
-    $("img").lazyload();
-});
-
-
-
-
 (function () {
     $(function () {
         $(".app").mouseenter(function () {
