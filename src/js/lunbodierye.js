@@ -51,7 +51,7 @@ $(function () {
                 KhtmlOpacity: 0.5,
                 opacity: 0.5
             })
-            $(this).find(".com2-1").stop().animate({
+            $(this).find(".com2-1").css({
                 color:"red"
             })
         })
@@ -62,7 +62,7 @@ $(function () {
                 KhtmlOpacity: 1,
                 opacity: 1
             })
-            $(this).find(".com2-1").stop().animate({
+            $(this).find(".com2-1").css({
                 color:"#000"
             })
         })
