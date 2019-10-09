@@ -60,19 +60,13 @@ u {
 
 .wrap {
     height: 32px;
-    width: 1070px;
+    width: 1228px;
     margin: 0 auto;
 }
 
 .left {
     height: 32px;
-    width: 342px;
-    float: left;
-}
-
-.left_top{
-    height: 32px;
-    width: 90px;
+    width: 260px;
     float: left;
 }
 
@@ -89,11 +83,6 @@ u {
     margin-left: 20px
 }
 
-.left_top span{
-    padding-left: 18px;
-    background: url(../images/jia.png) no-repeat -1px -4px;
-}
-
 .adress span {
     padding-left: 18px;
     background: url(../images/P1.png) no-repeat -1px -4px;
@@ -105,7 +94,7 @@ u {
 }
 
 .header a {
-    color: #666666;
+    color: #666666
 }
 
 .header a:hover {
@@ -114,7 +103,7 @@ u {
 
 .right {
     height: 32px;
-    width: 370px;
+    width: 360px;
     float: right;
 }
 
@@ -139,13 +128,9 @@ u {
     color: #B1B1C4
 }
 
-.right .login span:hover{
-    color: #FF4040;
-}
-
 .vip {
     width: 85px;
-    margin-left: 10px;
+    margin-left: 10px
 }
 
 .vip span {
@@ -163,9 +148,24 @@ u {
     background: url(../images/p3.png) no-repeat -4px -5px;
 }
 
-.app span{
-    padding-left: 18px;
-    background: url(../images/app.png) no-repeat -2px -3px;
+.app {
+    position: relative;
+}
+
+.app2 {
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    right: -31px;
+    background: #fff;
+    z-index: 20;
+    border: 1px solid #E5E5E5;
+    display: none;
+}
+
+.app2 p {
+    text-align: center;
+    line-height: 20px;
 }
 
 

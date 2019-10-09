@@ -1,1 +1,1 @@
-"use strict";$(function(){$("img").lazyload()});
+"use strict";$(function(){$("img").lazyload()}),$(function(){$(".app").mouseenter(function(){$(".app2").css({display:"block"})}),$(".app").mouseleave(function(){$(".app2").css({display:"none"})})});
