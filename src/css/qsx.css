@@ -494,12 +494,7 @@ a:hover {
 .on {
     font-weight: 700;
 }
-
-/* .head_nav_guding {
-    position: fixed;
-    top: 0;
-    left: 450px;
-    z-index: 9999;
-    width: 100%;
-    display: none;
-} */
+.lazy{
+    width: 171px;
+    height: 171px;
+}
