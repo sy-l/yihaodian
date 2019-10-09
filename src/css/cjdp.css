@@ -329,7 +329,7 @@ i{
     padding-top: 170px;
 }
 .main_top{
-    width: 1070px;
+    width: 100%;
     height: 60px;
     margin: 0 auto;
     background: url(../images/img_title_bg.png) no-repeat;
