@@ -132,14 +132,16 @@ a:hover {
 .hd_top_cl:hover .hd_top_x {
     display: inline;
 }
-.head_nav{
+
+.head_nav {
     height: 142px;
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
 }
-.head_nav_wrap{
+
+.head_nav_wrap {
     position: absolute;
     height: 180px;
     background-repeat: no-repeat;
@@ -148,24 +150,28 @@ a:hover {
     margin-left: -535px;
     width: 1070px;
 }
-.head_nav_warp_left{
+
+.head_nav_warp_left {
     float: left;
     position: relative;
     width: 300px;
     height: 140px;
 }
-.head_nav_warp_left_logo1{
+
+.head_nav_warp_left_logo1 {
     position: relative;
     display: block;
     width: 140px;
     height: 140px;
     margin-top: 1px;
 }
-.head_nav_warp_left_logo1 img{
+
+.head_nav_warp_left_logo1 img {
     width: 140px;
     height: 140px;
 }
-.head_nav_warp_left_logo2{
+
+.head_nav_warp_left_logo2 {
     display: table;
     width: 160px;
     height: 90px;
@@ -173,10 +179,12 @@ a:hover {
     right: 0;
     top: 30px;
 }
-.head_nav_warp_left_logo2 img{
-   width: 160px;
-   height: 90px;
+
+.head_nav_warp_left_logo2 img {
+    width: 160px;
+    height: 90px;
 }
+
 .move1 {
     height: 38px;
     width: 438px;
@@ -198,7 +206,7 @@ a:hover {
     float: right;
     margin-top: 36px;
     line-height: 38px;
-    
+
 }
 
 .car1 a {
@@ -207,9 +215,11 @@ a:hover {
     font-size: 16px;
     color: #000;
 }
-.car1:hover{
-   background: rgb(243, 243, 243);
+
+.car1:hover {
+    background: rgb(243, 243, 243);
 }
+
 .sear1 {
     height: 38px;
     width: 70px;
@@ -219,23 +229,27 @@ a:hover {
     margin-top: 36px;
     border-radius: 0 20px 20px 0;
 }
-.head_nav_ser p{
+
+.head_nav_ser p {
     width: 650px;
     height: 27px;
     position: absolute;
     top: 81px;
     left: 381px;
 }
-.head_nav_ser a{
+
+.head_nav_ser a {
     line-height: 19px;
     font-size: 14px;
     color: #aaa;
 }
-.head_nav_ser a:hover{
+
+.head_nav_ser a:hover {
     color: #000;
 }
-.head_nav_resou{
-    display: none; 
+
+.head_nav_resou {
+    display: none;
     position: absolute;
     top: 74px;
     left: 377px;
@@ -245,7 +259,8 @@ a:hover {
     border-radius: 0px 0px 5px 5px;
     z-index: 2;
 }
-.head_nav_resou dl{
+
+.head_nav_resou dl {
     float: left;
     width: 180px;
     height: 100%;
@@ -254,16 +269,19 @@ a:hover {
     border-left: 1px solid #e5e5e5;
     margin-left: -1px;
 }
-.head_nav_resou dt{
+
+.head_nav_resou dt {
     padding: 11px 6px 11px 0;
     color: #666;
     font-size: 12px;
 }
-.head_nav_resou dd{
+
+.head_nav_resou dd {
     float: left;
     margin: 0 4px 5px 0;
 }
-.head_nav_resou a{
+
+.head_nav_resou a {
     display: block;
     float: left;
     max-width: 150px;
@@ -275,28 +293,34 @@ a:hover {
     overflow: hidden;
     color: #000;
 }
-.main{
+
+.main {
     width: 100%;
     height: 3620px;
     background-color: #efefef;
 }
-.main_wrap{
+
+.main_wrap {
     width: 990px;
     height: 3000px;
     margin: auto;
 }
-.beijing img{
+
+.beijing img {
     width: 990px;
     height: 616px;
 }
-.main_nav img{
+
+.main_nav img {
     width: 990px;
     height: 114px;
 }
-.main_wrap ul{
+
+.main_wrap ul {
     font-size: 16px;
 }
-.main_wrap li{
+
+.main_wrap li {
     width: 165px;
     float: left;
     height: 50px;
@@ -304,16 +328,19 @@ a:hover {
     text-align: center;
     cursor: pointer;
 }
-.main_wrap_sp{
-   background: #FFF;
+
+.main_wrap_sp {
+    background: #FFF;
     width: 190px;
     height: 274px;
 }
-.mian_sp{
+
+.mian_sp {
     width: 990px;
     height: 580px;
 }
-.main_sp a{
+
+.main_sp a {
     display: inline-block;
     vertical-align: top;
     width: 184px;
@@ -325,10 +352,11 @@ a:hover {
     font-family: Microsoft
 }
 
-.main_wrap_shang{
-   margin: 10px;
-   align-items: center;
+.main_wrap_shang {
+    margin: 10px;
+    align-items: center;
 }
+
 .pd_title {
     line-height: 16px;
     padding: 0 18px;
@@ -343,18 +371,22 @@ a:hover {
     -webkit-box-orient: vertical;
     word-break: break-all;
 }
-.main_wrap_but{
+
+.main_wrap_but {
     width: 156px;
     height: 25px;
     padding: 12px 18px;
 }
-.main_wrap_sp:hover p{
+
+.main_wrap_sp:hover p {
     color: red;
 }
-.main_wrap_sp:hover img{
-    opacity:0.8;
+
+.main_wrap_sp:hover img {
+    opacity: 0.8;
 }
-.main_foot img{
+
+.main_foot img {
     width: 990px;
     height: 114px;
     padding-top: 11px;
@@ -454,6 +486,20 @@ a:hover {
     text-align: center;
     font-size: 0;
 }
-.head_nav_guding{
+
+.head_nav_guding {
     background-color: #efefef;
 }
+
+.on {
+    font-weight: 700;
+}
+
+/* .head_nav_guding {
+    position: fixed;
+    top: 0;
+    left: 450px;
+    z-index: 9999;
+    width: 100%;
+    display: none;
+} */
