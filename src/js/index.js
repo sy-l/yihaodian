@@ -125,7 +125,7 @@ $(function() {
 });
 //购物车
 var items1 = [{
-    itemName: "内衣",
+    itemName: "袜子",
     isChecked: true,
     itemPrice: 8.8,
     itemNum: 2,
@@ -164,6 +164,11 @@ for (var i = 0; i < items1.length; i++) {
     str += "<li>" + items1[i].itemName + "</li>";
 }
 list.innerHTML = str;
+$('#list li').css({
+    height: '20px',
+    width: '50px',
+    color: 'transparent'
+})
 var ali = document.querySelectorAll("#list>li");
 // var count = 0;
 for (var i = 0; i < ali.length; i++) {

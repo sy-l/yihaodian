@@ -188,40 +188,43 @@
         </div>
     </div>
     <!-- 轮播开始 -->
-    <div class="big-box">
-        <div class="swiper-pagination"></div>
-        <div class="swiper-container" id="box1">
+    <div id="certify">
+        <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="./images/sw1.png" alt="">
+                    <div class="boxx">
+                        <img src="./images/sw1.png" />
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./images/sw1.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/sw1.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/sw1.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/sw1.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/sw1.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./images/sw1.png" alt="">
-                </div>
+                    <div class="boxx">
+                        <img src="./images/sw1.png" />
+                    </div>
 
+                </div>
+                <div class="swiper-slide">
+                    <div class="boxx">
+                        <img src="./images/sw1.png" />
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="boxx">
+                        <img src="./images/sw1.png" />
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="boxx">
+                        <img src="./images/sw1.png" />
+                    </div>
+
+                </div>
             </div>
-
-            <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
-            <div class="swiper-button-prev"></div>
-            <!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
-            <div class="swiper-button-next"></div>
-            <!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
     <!-- 底部开始 -->
     <div class="foot">
@@ -339,6 +342,12 @@
         </div>
 
     </div>
+    <!-- 回到顶部 -->
+    <div class="back">
+        <div class="back_n">
+            <span>返回 <br> 顶部</span>
+        </div>
+    </div>
 
 
 
@@ -348,30 +357,70 @@
 
     <script src="./js/iconfont.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./js/jquery.js"></script>
     <script>
         //轮播
-        ;
-        (function() {
-            var mySwiper = new Swiper('.swiper-container', {
-                // grabCursor: true,
-                effect: 'coverflow',
-                slidesPerView: 3,
-                // centeredSlides: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-
-                },
-                type: 'custom',
+        certifySwiper = new Swiper('#certify .swiper-container', {
+                watchSlidesProgress: true,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                loop: true,
+                loopedSlides: 5,
+                autoplay: true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
-                loop: true,
-                autoplay: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    //clickable :true,
+                },
+                on: {
+                    progress: function(progress) {
+                        for (i = 0; i < this.slides.length; i++) {
+                            var slide = this.slides.eq(i);
+                            var slideProgress = this.slides[i].progress;
+                            modify = 1;
+                            if (Math.abs(slideProgress) > 1) {
+                                modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                            }
+                            translate = slideProgress * modify * 260 + 'px';
+                            scale = 1 - Math.abs(slideProgress) / 5;
+                            zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                            slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                            slide.css('zIndex', zIndex);
+                            slide.css('opacity', 1);
+                            if (Math.abs(slideProgress) > 3) {
+                                slide.css('opacity', 0);
+                            }
+                        }
+                    },
+                    setTransition: function(transition) {
+                        for (var i = 0; i < this.slides.length; i++) {
+                            var slide = this.slides.eq(i)
+                            slide.transition(transition);
+                        }
+
+                    }
+                }
 
             })
-        }())
+            //回到顶部
+        $(function() {
+            $(window).scroll(function() {
+                var oT = $(document).scrollTop();
+                if (oT > 500) {
+                    $(".back").fadeIn();
+                } else {
+                    $(".back").fadeOut();
+                }
+            });
+            $(".back_n").click(function() {
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 200);
+            });
+        })
     </script>
 </body>
 
