@@ -163,9 +163,10 @@ $('.thumbnail').mouseout(function () {
 
 
 /* 点击切换规格 */
-;(function(){
-    $(function(){
-        $(".specification li").click(function(){
+;
+(function () {
+    $(function () {
+        $(".specification li").click(function () {
             $(".specification li b").removeClass("gui2");
             $(this).addClass("gui1").siblings().removeClass("gui1");
             $(this).find("b").addClass("gui2");
@@ -230,4 +231,62 @@ $('.thumbnail').mouseout(function () {
     })
 }())
 
-/* 商品介绍 评价 规格及包装 售后服务 选项卡 */
+/* 商品介绍 评价 规格及包装 售后服务 楼层 */
+;
+(function () {
+    $(function () {
+        // $(".Tab-Control li").
+        // 滚动条事件
+        $(window).scroll(function () {
+            // 获取滚动距离
+            var os = $(document).scrollTop();
+            if (os >= ($(".louce4").offset().top-46)) {
+                $(".lou22,.lou33,.lou11").removeClass("cur");
+                $(".lou44").addClass("cur");
+            } else if (os >= ($(".louce3").offset().top-46)) {
+                $(".lou22,.lou11,.lou44").removeClass("cur");
+                $(".lou33").addClass("cur");
+            } else if (os >= ($(".louce2").offset().top-46)) {
+                $(".lou11,.lou33,.lou44").removeClass("cur");
+                $(".lou22").addClass("cur");
+            } else if (os >= ($(".louce1").offset().top-46)) {
+                $(".lou22,.lou33,.lou44").removeClass("cur");
+                $(".lou11").addClass("cur");
+            }
+            if (os > ($(".lou00").offset().top+10)) {
+                $(".des_fixed").fadeIn();
+            } else {
+                $(".des_fixed").fadeOut();
+            }
+        }).trigger("scroll");
+        // 点击侧边导航页面位置滚动到对应的距离
+        $(".lou1,.lou11").click(function () {
+            $(".lou11").addClass("cur");
+            $(".lou22,.lou33,.lou44").removeClass("cur");
+            $("html,body").animate({
+                scrollTop: $(".louce1").offset().top - 46
+            }, 200);
+        });
+        $(".lou2,.lou22").click(function () {
+            $(".lou22").addClass("cur");
+            $(".lou11,.lou33,.lou44").removeClass("cur");
+            $("html,body").animate({
+                scrollTop: $(".louce2").offset().top - 46
+            }, 200);
+        });
+        $(".lou3,.lou33").click(function () {
+            $(".lou33").addClass("cur");
+            $(".lou22,.lou11,.lou44").removeClass("cur");
+            $("html,body").animate({
+                scrollTop: $(".louce3").offset().top - 46
+            }, 200);
+        });
+        $(".lou4,.lou44").click(function () {
+            $(".lou44").addClass("cur");
+            $(".lou22,.lou33,.lou11").removeClass("cur");
+            $("html,body").animate({
+                scrollTop: $(".louce4").offset().top - 46
+            }, 200);
+        });
+    })
+}())

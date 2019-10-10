@@ -1478,10 +1478,134 @@ u {
     vertical-align: -2px;
     margin-right: 3px;
 }
+.all2 li .acc{
+    background: url("../images/bsprite_icon2.png") -271px -86px no-repeat;
+}
 .all2 li span {
     font-size: 12px;
 }
 /* 全部end */
+/* 内容 */
+.comment_con{
+    padding: 20px 0;
+}
+.main3{
+    padding: 0 35px 0 96px;
+    position: relative;
+}
+.item{
+    position: relative;
+    width: 100%;
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f3f3f3;
+}
+.face{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: -78px;
+    top: -2px;
+    border-radius: 50%;
+    background: url("../images/bsprite_icon2.png") no-repeat -259px -121px;
+    border: 4px solid #FFF;
+    overflow: hidden;
+}
+.face img{
+    width: 50px;
+    height: 50px;
+}
+.nameBox{
+    position: absolute;
+    left: -91px;
+    top: 60px;
+}
+.nameBox .name {
+    display: block;
+    width: 80px;
+    text-align: center;
+}
+.nameBox .name em {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.user_info{
+    padding-left: 0;
+    height: 24px;
+    background-color: #fff7f7;
+    line-height: 24px;
+    overflow: hidden;
+}
+.typeNum{
+    display: inline-block;
+    margin-right: 15px;
+    color: #666;
+    vertical-align: middle;
+    margin: 0 1px;
+}
+.star{
+    display: inline-block;
+    margin-right: 15px;
+    color: #666;
+    vertical-align: middle;
+    margin: 0 2px 0 -10px;
+    width: 86px;
+    height: 20px;
+    background: url("../images/bsprite_icon2.png") no-repeat -10px -130px;
+    line-height: 20px;
+}
+.inner{
+    margin-top: 12px;
+    padding-left: 40px;
+}
+.type{
+    width: 40px;
+    margin-left: -40px;
+    float: left;
+    line-height: 20px;
+}
+.inner .text {
+    color: #666;
+    word-wrap: break-word;
+    float: left;
+    line-height: 22px;
+    overflow: hidden;
+    word-break: break-all;
+}
+.pro_show {
+    margin-top: 20px;
+    padding-left: 40px;
+}
+.thumb_box {
+    height: 52px;
+    position: relative;
+}
+.thumb_box li {
+    float: left;
+    overflow: hidden;
+    margin-right: 2px;
+    background-color: #fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+.thumb_box li .border {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    padding: 2px;
+    border: 1px solid #d9d9d9;
+}
+.replyBtn_con {
+    height: 30px;
+    line-height: 30px;
+}
+.praise {
+    position: relative;
+    padding-left: 0;
+    float: right;
+}
+/* 内容end */
 /* 评论end*/
 /* 商品介绍 评价 规格及包装 售后服务 楼层end */
 /* 右 顾客最喜爱商品排行榜 规格参数 评论end */
@@ -1576,3 +1700,184 @@ u {
     width: 615px;
     margin: 0 auto;
 }
+
+.louce1,.louce2,.louce3,.louce4,.lou00{
+    height: 1px;
+}
+/* 导航 */
+.des_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    background-color: #fafafa;
+    box-shadow: 0 0 4px 1px #eee;
+    border-bottom: 1px solid #efefef;
+    left: 0;
+    z-index: 9999;
+}
+.des_fixed .des {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 999;
+}
+.des_search {
+    margin-right: 12px;
+    padding-left: 10px;
+    width: 198px;
+    height: 40px;
+}
+.des_fixed .shopdsr .shopdsr_name {
+    float: left;
+    width: 110px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 40px;
+    font-family: 'Microsoft Yahei';
+}
+em {
+    font-style: normal;
+}
+.shopdsr_name a{
+    color: #333333;
+}
+.shopdsr_name a:hover{
+    color: #CC0000;
+}
+.des_fixed .shopdsr .shopdsr_online {
+    float: left;
+    margin-left: 5px;
+    padding-top: 10px;
+}
+.des_fixed .shopdsr .self_support_enter {
+    padding-top: 12px;
+}
+.des_fixed .selfSupportIcon {
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    vertical-align: middle;
+}
+.des_fixed .des_tab {
+    width: 980px;
+    border: 0;
+    float: left;
+    _display: inline;
+}
+.des_tab li {
+    height: 100%;
+    line-height: 50px;
+    color: #333;
+    font: normal 14px/50px '\5FAE\8F6F\96C5\9ED1';
+}
+.des_tab .des_tabbox {
+    float: left;
+    background-color: #fafafa;
+}
+.des_fixed .des_tabbox {
+    border-left: 1px solid #e1e1e1;
+}
+.des_tab .cur {
+    background-color: #e60012;
+    color: white;
+}
+.des_tab .tab {
+    position: relative;
+    top: -1px;
+    left: -1px;
+    float: left;
+    width: 120px;
+    border-right: 1px solid #e1e1e1;
+    height: 42px;
+    line-height: 40px;
+    text-align: center;
+    color: #333;
+    font-family: 'microsoft yahei';
+    font-size: 14px;
+    outline: 0;
+    z-index: 30;
+}
+.des_tab .des_tabbox .tab {
+    width: 110px;
+}
+.des_tab .des_act {
+    float: right;
+    width: 224px;
+    line-height: 16px;
+}
+.des_tab .des_buy {
+    position: relative;
+    padding: 0 10px;
+    width: 120px;
+}
+.des_tab .des_act .btnbox {
+    padding-top: 6px;
+}
+.btnbox .add_cart {
+    display: inline-block;
+    padding-left: 10px;
+    background-position: 0 -613px;
+    height: 28px;
+    color: #FFFFFF;
+    background: #FF5353;
+}
+.des_tab .des_act .btnbox .add_cart span {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+    _position: relative;
+    cursor: pointer;
+}
+.btnbox .add_cart span {
+    display: inline-block;
+    padding-right: 10px;
+    margin-right: -3px;
+    height: 28px;
+    line-height: 28px;
+    font-weight: bold;
+}
+.des_tab .des_buy .tab_buy_info {
+    position: absolute;
+    top: 34px;
+    left: -1px;
+    width: 138px;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    border-top: 0;
+    background-color: #fff;
+    display: none;
+    text-align: center;
+}.des_tab .des_buy .tab_buy_info a {
+    display: block;
+    text-align: center;
+    cursor: default;
+}
+.des_tab .des_buy .tab_buy_info .tab_buy_tit {
+    display: block;
+    margin: 0 auto;
+    width: 115px;
+    height: 34px;
+    color: #666;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'arial';
+    overflow: hidden;
+}
+.des_tab .des_buy .tab_price {
+    display: block;
+    margin: 5px auto;
+    width: 115px;
+    color: #ff3c3c;
+    font-family: tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/* 导航end */
