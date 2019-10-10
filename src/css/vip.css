@@ -298,33 +298,6 @@ a:hover {
     font-weight: bold;
 }
 
-.big-box {
-    height: 457px;
-    width: 100%;
-    position: relative;
-}
-
-#box1 {
-    height: 457px;
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 88px;
-}
-
-.big-box .swiper-pagination {
-    height: 40px;
-    width: 454px;
-    position: absolute;
-    top: -62px;
-    left: 722px;
-}
-
-#box1 .swiper-wrapper {
-    height: 346px;
-    width: 883px;
-    margin: 30px auto
-}
-
 
 /* 底部开始 */
 
@@ -421,4 +394,124 @@ a:hover {
     padding: 10px 0 20px;
     text-align: center;
     font-size: 0;
+}
+
+
+/* CSS Document */
+
+#certify {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto
+}
+
+#certify .swiper-container {
+    padding-bottom: 60px;
+}
+
+#certify .swiper-slide {
+    width: 520px;
+    height: 408px;
+    background: #fff;
+    /* box-shadow: 0 8px 30px #ddd; */
+    background: transparent;
+}
+
+#certify .swiper-slide img {
+    display: block;
+}
+
+#certify .swiper-slide p {
+    line-height: 98px;
+    padding-top: 0;
+    text-align: center;
+    color: #636363;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+#certify .swiper-pagination {
+    width: 100%;
+    bottom: 20px;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+    border: 3px solid #fff;
+    background-color: #d5d5d5;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    border: 3px solid #00aadc;
+    background-color: #fff;
+}
+
+#certify .swiper-button-prev {
+    left: -30px;
+    width: 45px;
+    height: 45px;
+    background: url(../images/wm_button_icon.png) no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+}
+
+#certify .swiper-button-prev:hover {
+    background-position: 0 -46px;
+    background-size: 100%
+}
+
+#certify .swiper-button-next {
+    right: -30px;
+    width: 45px;
+    height: 45px;
+    background: url(../images/wm_button_icon.png) no-repeat;
+    background-position: 0 -93px;
+    background-size: 100%;
+}
+
+#certify .swiper-button-next:hover {
+    background-position: 0 -139px;
+    background-size: 100%
+}
+
+.boxx {
+    width: 247px;
+    height: 340px;
+    margin: 30px auto;
+    box-shadow: 0 8px 30px #ddd;
+    cursor: pointer;
+}
+
+.back {
+    height: 50px;
+    width: 50px;
+    background: #fff url(../images/backkk.png) no-repeat center center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    box-shadow: 0 0 1px 1px #ccc;
+    display: none;
+}
+
+.back_n {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding-top: 3px;
+    background: #969696;
+    display: none;
+    box-shadow: 0 0 1px 1px #ccc;
+}
+
+.back_n span {
+    font-size: 14px;
+    color: #fff;
+}
+
+.back:hover .back_n {
+    display: block;
 }
