@@ -128,10 +128,10 @@ var items1 = [{
     itemName: "袜子",
     isChecked: true,
     itemPrice: 8.8,
-    itemNum: 2,
+    itemNum: 1,
     subTotal: 8.8
 }, {
-    itemName: "内裤",
+    itemName: "毛巾",
     isChecked: true,
     itemPrice: 9.9,
 
@@ -144,7 +144,7 @@ var items1 = [{
     itemNum: 1,
     subTotal: 18.8
 }, {
-    itemName: "蜡烛",
+    itemName: "牙刷",
     isChecked: true,
     itemPrice: 88.8,
     itemNum: 1,
@@ -165,7 +165,8 @@ for (var i = 0; i < items1.length; i++) {
 }
 list.innerHTML = str;
 $('#list li').css({
-    height: '20px',
+
+    lineHeight: '50px',
     width: '50px',
     color: 'transparent'
 })
@@ -190,12 +191,15 @@ for (var i = 0; i < ali.length; i++) {
                 //console.log(items1[this.index]);
                 // items[i].itemNum = parseInt(items1[this.index].itemNum) + 1;
                 // console.log(items[i].itemNum);
+                items[i].itemNum = items[i].itemNum + 1;
 
+                setCookie("items", JSON.stringify(items));
 
             }
         }
         if (flag) {
             items.push(items1[this.index]);
+            console.log(items)
             setCookie("items", JSON.stringify(items));
             alert("加入购物车成功");
         }

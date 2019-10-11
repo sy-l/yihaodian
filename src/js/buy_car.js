@@ -61,7 +61,7 @@ function fillCart() {
         add[i].onclick = function() {
             //alert(1);
             cart.items[this.index].itemNum = cart.items[this.index].itemNum + 1;
-            console.log(cart);
+            setCookie("items", JSON.stringify(cart.items));
             fillCart();
         }
     }
@@ -77,6 +77,7 @@ function fillCart() {
 
                 cart.items[this.index].itemNum = 1
             }
+            setCookie("items", JSON.stringify(cart.items));
             fillCart();
         }
     }
@@ -132,9 +133,14 @@ function fillCart() {
     for (var i = 0; i < del.length; i++) {
         del[i].index = i;
         del[i].onclick = function() {
+            // setCookie("items", JSON.stringify(items));
             if (confirm("您确认删除吗")) {
                 cart.items.splice(this.index, 1);
+                console.log(cart.items)
+                setCookie("items", JSON.stringify(cart.items));
+
                 fillCart();
+
             }
         }
     }
