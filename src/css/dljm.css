@@ -342,3 +342,7 @@ form {
     margin-top: 10px;
     color: #333;
 }
+#error_box{
+    color: red;
+    font-size:15px;
+}
