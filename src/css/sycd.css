@@ -180,7 +180,9 @@ a:hover {
     font-size: 16px;
     margin-left: -180px
 }
-
+.hd_nav_d a:hover{
+    color: #bc9c66;
+}
 .hd_nav_ee {
     border: 1px solid rgb(204, 206, 207);
     width: 132px;
@@ -620,4 +622,9 @@ a:hover {
 .head_sp_wrap img{
     width: 170px;
     height: 170px;
+}
+.hd_nav_c a{
+    font-weight: 600;
+    color: #bc9c66;
+    font-size: 16px;
 }

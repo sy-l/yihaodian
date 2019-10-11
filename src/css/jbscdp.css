@@ -154,8 +154,8 @@ a:hover {
     width: 124px;
     height: 30px;
     margin-top: 35px;
+    
 }
-
 .hd_nav_a img {
     height: 32.81px;
     width: 124px;
@@ -168,13 +168,17 @@ a:hover {
 }
 
 .hd_nav_c {
-    font-weight: 600;
-    color: #bc9c66;
     font-size: 16px;
     margin-top: 35px;
     width: 200px;
 }
-
+.hd_nav_c a {
+    font-size: 16px;
+}
+.hd_nav_c a:hover {
+    font-size: 16px;
+    color: #bc9c66;
+}
 .hd_nav_d {
     margin-top: 35px;
     width: 200px;
@@ -182,7 +186,10 @@ a:hover {
 
 .hd_nav_d a {
     font-size: 16px;
-    margin-left: -180px
+    margin-left: -180px;
+    color: #bc9c66;
+    font-weight: 600;
+    font-weight: 600;
 }
 
 .hd_nav_ee {
