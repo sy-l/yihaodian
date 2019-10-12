@@ -290,3 +290,68 @@ $('.thumbnail').mouseout(function () {
         });
     })
 }())
+
+//购物车
+var items1 = [
+{
+    itemName: "牛奶",
+    isChecked: true,
+    itemPrice: 89,
+    itemNum: 1,
+    subTotal: 89
+}]
+var list = document.querySelector("#list");
+var str = "";
+/*
+cookie
+items
+    []
+*/
+var items2 = getCookie("items2") ? JSON.parse(getCookie("items2")) : [];
+// var counts = getCookie("count") ? JSON.parse(getCookie("count")) : [];
+// console.log(items);
+for (var i = 0; i < items1.length; i++) {
+    str += "<li>" + items1[i].itemName + "</li>";
+}
+list.innerHTML = str;
+$('#list li').css({
+
+    lineHeight: '50px',
+    width: '146px',
+    color: 'transparent'
+})
+var ali = document.querySelectorAll("#list>li");
+// var count = 0;
+for (var i = 0; i < ali.length; i++) {
+    ali[i].index = i;
+    ali[i].onclick = function() {
+        // 插入数据
+        // 去重
+        var flag = true;
+
+
+        //  console.log(count);
+        for (var i = 0; i < items2.length; i++) {
+
+            if (items2[i].itemName == items1[this.index].itemName) {
+                flag = false;
+                // count++;
+
+                // setCookie("counts", count);
+                //console.log(items1[this.index]);
+                // items[i].itemNum = parseInt(items1[this.index].itemNum) + 1;
+                // console.log(items[i].itemNum);
+                items2[i].itemNum = items2[i].itemNum + 1;
+
+                setCookie("items2", JSON.stringify(items2));
+
+            }
+        }
+        if (flag) {
+            items2.push(items1[this.index]);
+            setCookie("items2", JSON.stringify(items2));
+            alert("加入购物车成功");
+        }
+
+    }
+}
