@@ -26,9 +26,11 @@
             return false;
         });
     });
+
+// 导航固定
 ; $(window).scroll(function () {
-    var bignav = $("bignav");      //获取到导航栏
-    if ($(this).scrollTop() > 250) {  //当滚动距离大于250px时执行下面的东西
+    var bignav = $(".head_nav_guding");      //获取到导航栏
+    if ($(this).scrollTop() > 700) {  //当滚动距离大于700px时执行下面的东西
         bignav.css({
             width: "100%",
             position: "fixed",
@@ -36,25 +38,10 @@
             zIndex: 9999
         });
     }
-    else {//当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状
+    else {//当滚动距离小于700的时候执行下面的内容，也就是让导航栏恢复原状
         bignav.css("position", "static");
     }
 })
-    // 导航固定
-    ; $(window).scroll(function () {
-        var bignav = $(".head_nav_guding");      //获取到导航栏
-        if ($(this).scrollTop() > 700) {  //当滚动距离大于700px时执行下面的东西
-            bignav.css({
-                width: "100%",
-                position: "fixed",
-                top: 0,
-                zIndex: 9999
-            });
-        }
-        else {//当滚动距离小于700的时候执行下面的内容，也就是让导航栏恢复原状
-            bignav.css("position", "static");
-        }
-    })
 /*  */
 $(window).scroll(function () {
     // 获取滚动距离

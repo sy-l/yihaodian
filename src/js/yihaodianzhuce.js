@@ -113,22 +113,29 @@ input 获取焦点时里面的文字left值改动
     $("#userName").blur(function () {
         var res = regUser.test(trimer($("#userName").val()));
         if ($("#userName").val() == "") {
-            $(".verify1").html("用户名不能为空")
+            $(".verify1").html("用户名不能为空");
+            // $('.agreement_btn').attr('href', 'JavaScript:;');
         } else {
             if (!res) {
                 //验证不通过
                 $(".verify1").html("不通过").css({
                     color: "red"
                 });
+                // $('.agreement_btn').attr('href', 'JavaScript:;');
                 rules.user = false;
             } else {
                 $(".verify1").html("通过").css({
                     color: "#69B76E"
                 });
+                // $('.agreement_btn').attr('href', './登录界面.html');
                 rules.user = true;
+                if (rules.phone&&rules.user&&rules.pwd&&rules.pwd2) {
+                    $('.agreement_btn').attr('href', './登录界面.html');
+                } else {
+                    $('.agreement_btn').attr('href', 'JavaScript:;');
+                }
             }
         }
-
     })
     // 验证手机号
     $("#phone").focus(function () {
@@ -138,16 +145,28 @@ input 获取焦点时里面的文字left值改动
     })
     $("#phone").blur(function () {
         var res2 = regphone.test(trimer($("#phone").val()));
-        if (!res2) {
-            $(".verify2").html("格式错误，请输入正确的手机号码").css({
-                color: "red"
-            });
-            rules.phone = false;
+        if ($("#phone").val() == "") {
+            $(".verify2").html("用户名不能为空");
+            // $('.agreement_btn').attr('href', 'JavaScript:;');
         } else {
-            $(".verify2").html("通过").css({
-                color: "#69B76E"
-            });
-            rules.phone = true;
+            if (!res2) {
+                $(".verify2").html("格式错误，请输入正确的手机号码").css({
+                    color: "red"
+                });
+                // $('.agreement_btn').attr('href', 'JavaScript:;');
+                rules.phone = false;
+            } else {
+                $(".verify2").html("通过").css({
+                    color: "#69B76E"
+                });
+                // $('.agreement_btn').attr('href', './登录界面.html');
+                rules.phone = true;
+                if (rules.phone&&rules.user&&rules.pwd&&rules.pwd2) {
+                    $('.agreement_btn').attr('href', './登录界面.html');
+                } else {
+                    $('.agreement_btn').attr('href', 'JavaScript:;');
+                }
+            }
         }
     })
     // 验证码
@@ -168,18 +187,26 @@ input 获取焦点时里面的文字left值改动
     $("#password").blur(function () {
         var res3 = pwd.test(trimer($("#password").val()));
         if ($("#password").val() == "") {
-            $(".verify4").html("密码不能为空")
+            $(".verify4").html("密码不能为空");
+            // $('.agreement_btn').attr('href', 'JavaScript:;');
         } else {
             if (!res3) {
                 $(".verify4").html("不通过").css({
                     color: "red"
                 });
+                // $('.agreement_btn').attr('href', 'JavaScript:;');
                 rules.pwd = false;
             } else {
                 $(".verify4").html("通过").css({
                     color: "#69B76E"
                 });
+                // $('.agreement_btn').attr('href', './登录界面.html');
                 rules.pwd = true;
+                if (rules.phone&&rules.user&&rules.pwd&&rules.pwd2) {
+                    $('.agreement_btn').attr('href', './登录界面.html');
+                } else {
+                    $('.agreement_btn').attr('href', 'JavaScript:;');
+                }
             }
         }
 
@@ -194,35 +221,68 @@ input 获取焦点时里面的文字left值改动
         if (($("#password2").val() == "")) {
             $(".verify5").html("请再次输入密码").css({
                 color: "#666666"
-            })
+            });
+            // $('.agreement_btn').attr('href', 'JavaScript:;');
         } else {
-            if ($("#password2").val() == $("#password").val()) {
-                $(".verify5").html("通过").css({
-                    color: "#69B76E"
-                });
-            } else {
+            if ($("#password2").val() != $("#password").val()) {
                 $(".verify5").html("两次密码输入不一致").css({
                     color: "red"
                 });
+                rules.pwd2=false;
+                // $('.agreement_btn').attr('href', 'JavaScript:;');
+            } else {
+                
+                $(".verify5").html("通过").css({
+                    color: "#69B76E"
+                });
+                rules.pwd2=true;
+                if (rules.phone&&rules.user&&rules.pwd&&rules.pwd2) {
+                    $('.agreement_btn').attr('href', './登录界面.html');
+                } else {
+                    $('.agreement_btn').attr('href', 'JavaScript:;');
+                }
+                // $('.agreement_btn').attr('href', './登录界面.html');
             }
         }
 
     })
-}())
 
-// 注册按钮
-;
-(function () {
-    $(function () {
-        $(".agreement_btn").mouseenter(function () {
-            $(this).css({
-                background: "#D72226"
+
+
+    /* if (rules.phone&&rules.user&&rules.pwd&&rules.pwd2) {
+        $('.agreement_btn').attr('href', './登录界面.html');
+    } else {
+        $('.agreement_btn').attr('href', 'JavaScript:;');
+    } */
+
+    
+
+    // 注册按钮
+    /*   if ($("#userName").val() == "") {
+          $("#password2").blur(function () {
+
+          })
+
+          $(".agreement_btn").css({
+              background: "green"
+          })
+      } else if ($("#phone").val() == "") {
+
+      } else if ($("#password").val() == "") {
+
+      } else if ($("#password2").val() == "") {
+         
+      } else {
+          
+      } */
+    /*  $(".agreement_btn").mouseenter(function () {
+                $(this).css({
+                    background: "#D72226"
+                })
             })
-        })
-        $(".agreement_btn").mouseleave(function () {
-            $(this).css({
-                background: "#FF3C3C"
-            })
-        })
-    })
+            $(".agreement_btn").mouseleave(function () {
+                $(this).css({
+                    background: "#FF3C3C"
+                })
+            }) */
 }())

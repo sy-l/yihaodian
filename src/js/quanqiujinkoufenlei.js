@@ -76,3 +76,60 @@ $(function () {
 $(function() {
     $("img").lazyload();
 });
+
+/* 购物数量添加减少 */
+;
+(function () {
+    $(".count-add").click(function () {
+        var n = parseInt($(".count-number").val());
+        n += 1;
+        $(".count-number").val(n);
+        if (n <= 1) {
+            n = 1;
+            $(".count-number").val(n);
+        }
+        if (n >= 199) {
+            n = 199;
+            $(".count-number").val(n);
+        }
+    });
+    $(".count-number").focus(function () {
+        var n = parseInt($(".count-number").val());
+        if (n <= 1) {
+            n = 1;
+            $(".count-number").val(n);
+        }
+        if (n >= 199) {
+            n = 199;
+            $(".count-number").val(n);
+        }
+    })
+    $(".count-reduce").click(function () {
+        var n = parseInt($(".count-number").val());
+        n -= 1;
+        $(".count-number").val(n);
+        if (n <= 1) {
+            n = 1;
+            $(".count-number").val(n);
+        }
+        if (n >= 199) {
+            n = 199;
+            $(".count-number").val(n);
+        }
+    })
+    $(".count-number").blur(function () {
+        var n = parseInt($(".count-number").val());
+        if (n <= 1) {
+            n = 1;
+            $(".count-number").val(n);
+        }
+        if (n >= 199) {
+            n = 199;
+            $(".count-number").val(n);
+        }
+        if (n >= 199) {
+            n = 199;
+            $(".count-number").val(n);
+        }
+    })
+}())
