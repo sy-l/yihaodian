@@ -168,6 +168,7 @@ input 获取焦点时里面的文字left值改动
                 }
             }
         }
+        
     })
     // 验证码
     $("#validCode").focus(function () {
@@ -246,7 +247,19 @@ input 获取焦点时里面的文字left值改动
         }
 
     })
-
+    
+    $(".agreement_btn").click(function(){
+        if($('.agreement_btn').attr('href')=='./登录界面.html'){
+            var userName={
+                    userName:$("#userName").val(),
+                    phone:$("#phone").val(),
+                    pwd:$("#password").val()
+                }
+            setCookie("userName", JSON.stringify(userName));
+        }else{
+            alert("请填写正确信息")
+        }
+    })
 
 
     /* if (rules.phone&&rules.user&&rules.pwd&&rules.pwd2) {
