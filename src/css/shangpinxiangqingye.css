@@ -327,11 +327,11 @@ u {
     color: #fff;
     margin-left: 33px;
     padding-right: 25px;
-    background: url(../images/shang.png) no-repeat 71px 5px;
+    background: url(../images/shang.png) no-repeat 57px 2px;
 }
 
 .all a:hover {
-    background: url(../images/xia.png) no-repeat 71px 5px;
+    background: url(../images/xia.png) no-repeat 57px 2px;
 }
 
 .wrap4 ul {

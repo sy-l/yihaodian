@@ -6,8 +6,14 @@
             $(this).find("ul>li").css({
                 borderBottom: "1px solid #ddd"
             })
+            $(".fb a").css({
+                color: "transparent"
+            })
         }, function () {
             $(this).find("ul").stop().hide();
+            $(".fb a").css({
+                color: "#333"
+            })
         })
     })
 }())
