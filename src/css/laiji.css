@@ -281,6 +281,11 @@ u {
     width: 240px;
     height: 343px;
     margin-left: 6px;
+    margin-top: 8px;
+    background: #fff;
+}
+.box_sp:hover{
+    
 }
 
 .sp_tu img {
