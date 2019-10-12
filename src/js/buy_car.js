@@ -6,7 +6,8 @@ var cart = {
 };
 // 取cookie
 var items = getCookie("items") ? JSON.parse(getCookie("items")) : [];
-
+var items2 = getCookie("items2") ? JSON.parse(getCookie("items2")) : [];
+items=[...items,...items2];
 cart.items = items;
 
 // 根据数据动态生成表格
