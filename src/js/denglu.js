@@ -42,6 +42,7 @@ function fnLogin() {
         isError = false;
         return;
     }
-    window.alert("登录成功")
+    window.alert("登录成功");
+    window.location.href="./index.html";
 
 }
