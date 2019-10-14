@@ -365,11 +365,11 @@ textarea {
     color: #fff;
     margin-left: 33px;
     padding-right: 25px;
-    background: url(../images/shang.png) no-repeat 71px 5px;
+    background: url(../images/shang.png) no-repeat 57px 2px;
 }
 
 .all a:hover {
-    background: url(../images/xia.png) no-repeat 71px 5px;
+    background: url(../images/xia.png) no-repeat 57px 2px;
 }
 
 .wrap4 ul {
@@ -932,6 +932,7 @@ textarea {
 
 .pl-1-1 {
     position: relative;
+    padding: 10px;
 }
 
 .pl-img {
@@ -1044,6 +1045,12 @@ textarea {
 .sC-2 .sC-2-1 {
     color: #fff;
     display: inline-block;
+    width: 90px;
+    height: 26px;
+    color: #fff;
+    line-height: 28px;
+    background-color: #ff5c4d;
+    border: 1px solid #ff4141;
 }
 
 .praise {

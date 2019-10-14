@@ -107,7 +107,7 @@ img {
     display: inline-block;
     padding: 0 15px 0 0;
     background: url("../images/jinglingtu.png") no-repeat -283px -24px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .hd_menu_list {
@@ -123,8 +123,8 @@ img {
 .drop-list {
     font-size: 14px;
     position: absolute;
-    right: -5px;
-    top: 0px;
+    right: -10px;
+    top: -1px;
     display: none;
     border: 1px solid #ddd;
     width: 80px;
